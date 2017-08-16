@@ -1,5 +1,5 @@
 ## $1 user2, user1 is origin
-printf "Input Master user username and password\n"
-git push origin master
 printf "Input Second user username and password\n"
 git push $1 master
+printf "Input Master user username and password\n"
+git push origin master
