@@ -1,4 +1,7 @@
 ## $1 is repo name, $2 is user1, $3 is user2
+blue=$(tput setaf 4)
+normal=$(tput sgr0)
+printf " ${blue} Input First  user username and password\n ${normal}"
 git clone https://github.com/$2/$1.git
 cd $1
 git remote add $3 https://github.com/$3/$1.git
