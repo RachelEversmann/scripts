@@ -10,6 +10,8 @@ then
     printf "$var" 
     git add $var
   done
+else
+  git add . 
 fi
 git commit -m $2 
 printf " ${blue} Input Second user username and password\n ${normal}"
