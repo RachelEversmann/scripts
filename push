@@ -1,6 +1,17 @@
-## $1 user2, user1 is origin
+## $1 user2,commit message $2, user1 is origin
 blue=$(tput setaf 4)
 normal=$(tput sgr0)
+printf $3 
+if [ $3 != '.' ]
+then
+ printf "here" 
+ for var in ${@:3}
+  do
+    printf "$var" 
+    git add $var
+  done
+fi
+git commit -m $2 
 printf " ${blue} Input Second user username and password\n ${normal}"
 git push $1 master
 printf " ${blue} Input Master user username and password\n ${normal}"
