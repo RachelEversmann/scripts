@@ -17,6 +17,5 @@ git commit -m "$mesg"
 printf " ${blue} Input Master user username and password\n ${normal}"
 git push origin master
 echo "Second User Name"
-read $user2
-printf " ${blue} Input Second user username and password\n ${normal}"
-git push $user2 master
+read user
+git push $user master
