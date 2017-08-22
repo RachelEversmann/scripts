@@ -6,7 +6,7 @@ for word in $files
   do
     if [ $word == '.' ]
       then
-      add .
+      git add .
     fi
     git add $word
     echo $word
