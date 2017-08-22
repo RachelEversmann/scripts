@@ -3,7 +3,6 @@ blue=$(tput setaf 4)
 normal=$(tput sgr0)
 echo 'files to add'
 read files
-echo $files
 if [ $files != '.' ]
 then
  for var in ${@:3}
