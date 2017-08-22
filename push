@@ -1,17 +1,16 @@
-## $1 user2,commit message $2, user1 is origin
 blue=$(tput setaf 4)
 normal=$(tput sgr0)
 echo 'files to add'
 read files
-if [ $files != '.' ]
-then
- for var in ${@:3}
+for word in $files 
   do
-    git add $var
+    if [ $word == '.' ]
+      then
+      add .
+    fi
+    git add $word
+    echo $word
   done
-else
-  git add . 
-fi
 echo 'Commit Message'
 read mesg
 git commit -m $mesg 
