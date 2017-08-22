@@ -13,7 +13,7 @@ for word in $files
   done
 echo 'Commit Message'
 read mesg
-git commit -m $mesg 
+git commit -m "$mesg" 
 printf " ${blue} Input Master user username and password\n ${normal}"
 git push origin master
 echo "Second User Name"
